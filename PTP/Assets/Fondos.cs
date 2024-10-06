@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fondos : MonoBehaviour
 {
     public GameObject jugador;
-    public float enex = 9.0f;
+    private float enex = 40.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +17,9 @@ public class Fondos : MonoBehaviour
     {
         if (jugador.gameObject.transform.position.x > enex)
         {
-            enex += 9.0f;
+            enex += 40.0f;
             Debug.Log("Hola");
-            transform.position = new Vector3(transform.position.x + 22.79f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + 38.4f, transform.position.y, transform.position.z);
         }
     }
 }

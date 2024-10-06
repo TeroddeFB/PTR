@@ -8,14 +8,23 @@ public class Rana : MonoBehaviour
     public bool isGrounded = true;
     public float horizontalInput;
     private Animator playerAnim;
+    public bool tocPared;
+    public static Rana Instance;
+    public Vector3 ubiJug;
+
     void Start()
     {
+        Instance = this;
+
         rb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
+
+
     }
 
     void Update()
     {
+        ubiJug = transform.position;
         horizontalInput = Input.GetAxisRaw("Horizontal") * 5f;
         rb.velocity = new Vector2(horizontalInput, rb.velocity.y);
         
@@ -54,20 +63,29 @@ public class Rana : MonoBehaviour
             isGrounded = true;
             playerAnim.SetBool("Saltando", false);
         }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Verifica si el objeto que entra al trigger tiene la etiqueta "Player"
-        if (collision.CompareTag("Cabeza"))
+        if (collision.gameObject.CompareTag("Cabeza"))
         {
             // Destruye el objeto que ha activado el trigger
             Destroy(collision.transform.parent.gameObject);
             rb.AddForce(Vector2.up * 6f, ForceMode2D.Impulse);
         }
-        else if (collision.CompareTag("Piso"))
+        else if (collision.gameObject.CompareTag("Piso"))
         {
             isGrounded = true;
             playerAnim.SetBool("Saltando", false);
         }
+        else if (collision.gameObject.CompareTag("Cereza"))
+        {
+            Destroy(collision.gameObject);
+        }
+
     }
+
+
+
 }

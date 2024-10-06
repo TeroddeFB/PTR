@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Piso
   - Cabeza
+  - Bloque
+  - Pared
+  - Cereza
   layers:
   - Default
   - TransparentFX
