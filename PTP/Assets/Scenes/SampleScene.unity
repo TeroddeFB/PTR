@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 472133918}
   - component: {fileID: 472133920}
   - component: {fileID: 472133919}
+  - component: {fileID: 472133921}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -237,7 +238,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472133917}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -246,8 +247,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 130, y: 52}
+  m_AnchoredPosition: {x: 0, y: -0.000061035156}
+  m_SizeDelta: {x: 130, y: 71.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &472133919
 MonoBehaviour:
@@ -303,7 +304,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -346,6 +347,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472133917}
   m_CullTransparentMesh: 1
+--- !u!114 &472133921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472133917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4432654f1e983644abf0036217157068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &552870300
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +370,7 @@ GameObject:
   - component: {fileID: 552870301}
   - component: {fileID: 552870303}
   - component: {fileID: 552870302}
+  - component: {fileID: 552870304}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -371,7 +385,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552870300}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -380,8 +394,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 130, y: 52}
+  m_AnchoredPosition: {x: 0, y: -7.424988}
+  m_SizeDelta: {x: 130, y: 71.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &552870302
 MonoBehaviour:
@@ -437,7 +451,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -480,6 +494,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552870300}
   m_CullTransparentMesh: 1
+--- !u!114 &552870304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552870300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4432654f1e983644abf0036217157068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &574402293
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +815,7 @@ GameObject:
   - component: {fileID: 1537765230}
   - component: {fileID: 1537765229}
   - component: {fileID: 1537765228}
-  - component: {fileID: 1537765231}
+  - component: {fileID: 1537765232}
   m_Layer: 5
   m_Name: "Bot\xF3n 2D"
   m_TagString: Untagged
@@ -899,7 +925,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537765226}
   m_CullTransparentMesh: 1
---- !u!114 &1537765231
+--- !u!114 &1537765232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -908,11 +934,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1537765226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4432654f1e983644abf0036217157068, type: 3}
+  m_Script: {fileID: 11500000, guid: 81d251a866c2f9940b3712a257150871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tmpText: {fileID: 472133919}
-  hoverText: -2D
+  hoverText: 
+  originalText: 
+  escena: 0
 --- !u!1 &1839041492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,7 +1028,7 @@ GameObject:
   - component: {fileID: 2079443440}
   - component: {fileID: 2079443439}
   - component: {fileID: 2079443438}
-  - component: {fileID: 2079443441}
+  - component: {fileID: 2079443442}
   m_Layer: 5
   m_Name: "Bot\xF3n 3D"
   m_TagString: Untagged
@@ -1110,7 +1138,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079443436}
   m_CullTransparentMesh: 1
---- !u!114 &2079443441
+--- !u!114 &2079443442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1119,8 +1147,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2079443436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4432654f1e983644abf0036217157068, type: 3}
+  m_Script: {fileID: 11500000, guid: 81d251a866c2f9940b3712a257150871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tmpText: {fileID: 552870302}
-  hoverText: -3D
+  hoverText: 
+  originalText: 
+  escena: 2

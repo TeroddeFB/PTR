@@ -14,7 +14,7 @@ public class MovCamara : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Rana.Instance != null)
+        if (Rana.Instance != null && Rana.Instance.vivo)
         {
             transform.position = new Vector3(jugador.gameObject.transform.position.x, transform.position.y, transform.position.z);
 

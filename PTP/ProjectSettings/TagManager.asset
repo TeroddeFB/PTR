@@ -52,3 +52,12 @@ TagManager:
   - name: Layer 1
     uniqueID: 68573889
     locked: 0
+  - name: Layer 2
+    uniqueID: 2543150553
+    locked: 0
+  - name: Jugador
+    uniqueID: 330433361
+    locked: 0
+  - name: Bandera
+    uniqueID: 1694673103
+    locked: 0

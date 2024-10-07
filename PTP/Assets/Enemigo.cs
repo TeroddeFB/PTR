@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,17 @@ public class Enemigo : MonoBehaviour
     public float maximoEnemigo;
     public float minimoJugador;
     private Animator playerAnim;
+    public bool puedeMatar;
+
+    private Animator enemigoAnimator;
+    private BoxCollider2D enemBox;
+    private GameObject malvado;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
+        puedeMatar = true;
 
     }
 
@@ -31,10 +38,21 @@ public class Enemigo : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && puedeMatar)
         {
-            Destroy(collision.gameObject);
+            Rana.Instance.vivo = false;
+            malvado = collision.gameObject;
+            enemigoAnimator = collision.gameObject.GetComponent<Animator>();
+            enemigoAnimator.SetBool("Muerto", true);
+            enemBox = collision.gameObject.GetComponent<BoxCollider2D>();
+            enemBox.enabled = false;
+            StartCoroutine(Moricion());
         }
 
+    }
+    IEnumerator Moricion()
+    {
+        yield return new WaitForSeconds(2.0f);
+        Destroy(malvado);
     }
 }

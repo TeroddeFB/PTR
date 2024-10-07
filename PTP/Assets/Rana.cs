@@ -11,6 +11,13 @@ public class Rana : MonoBehaviour
     public bool tocPared;
     public static Rana Instance;
     public Vector3 ubiJug;
+    public GameObject onCollectEffect;
+    private Animator enemigoAnimator;
+    private Enemigo enem;
+    private BoxCollider2D enemBox;
+    private GameObject malvado;
+    public bool vivo = true;
+
 
     void Start()
     {
@@ -26,8 +33,12 @@ public class Rana : MonoBehaviour
     {
         ubiJug = transform.position;
         horizontalInput = Input.GetAxisRaw("Horizontal") * 5f;
-        rb.velocity = new Vector2(horizontalInput, rb.velocity.y);
-        
+        if (vivo)
+        {
+            rb.velocity = new Vector2(horizontalInput, rb.velocity.y);
+
+        }
+
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
@@ -37,7 +48,7 @@ public class Rana : MonoBehaviour
             isGrounded = false;
 
         }
-        else if (horizontalInput != 0)
+        else if (horizontalInput != 0 && vivo)
         {
             playerAnim.SetBool("Corre", true);
             if (horizontalInput > 0)
@@ -70,8 +81,17 @@ public class Rana : MonoBehaviour
         // Verifica si el objeto que entra al trigger tiene la etiqueta "Player"
         if (collision.gameObject.CompareTag("Cabeza"))
         {
-            // Destruye el objeto que ha activado el trigger
-            Destroy(collision.transform.parent.gameObject);
+
+            malvado = collision.transform.parent.gameObject;
+            enemigoAnimator = collision.transform.parent.gameObject.GetComponent<Animator>();
+            enemigoAnimator.SetBool("Muerto", true);
+            enem = collision.transform.parent.gameObject.GetComponent<Enemigo>();
+            enem.puedeMatar = false;
+            enemBox = collision.transform.parent.gameObject.GetComponent<BoxCollider2D>();
+            enemBox.enabled = false;
+            StartCoroutine(Moricion());
+
+
             rb.AddForce(Vector2.up * 6f, ForceMode2D.Impulse);
         }
         else if (collision.gameObject.CompareTag("Piso"))
@@ -82,8 +102,15 @@ public class Rana : MonoBehaviour
         else if (collision.gameObject.CompareTag("Cereza"))
         {
             Destroy(collision.gameObject);
+            Instantiate(onCollectEffect, collision.gameObject.transform.position, transform.rotation);
+
         }
 
+    }
+    IEnumerator Moricion()
+    {
+        yield return new WaitForSeconds(4.0f);
+        Destroy(malvado);
     }
 
 
