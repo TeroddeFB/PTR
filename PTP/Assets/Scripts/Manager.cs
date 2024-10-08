@@ -42,7 +42,7 @@ public class Manager : MonoBehaviour
             {
                 Rana.Instance.vivo = false;
                 Rana.Instance.playerAnim.SetBool("Corre", false);
-                Rana.Instance.rb.velocity = new Vector2(0, 0);
+                Rana.Instance.rb.velocity = new Vector2(0, Rana.Instance.rb.velocity.y);
             }
 
         }

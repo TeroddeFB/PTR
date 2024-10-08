@@ -20,7 +20,6 @@ public class Enemigo : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
         puedeMatar = true;
-
     }
 
     // Update is called once per frame
@@ -39,16 +38,19 @@ public class Enemigo : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && puedeMatar)
-        {
-            Rana.Instance.vivo = false;
+        {            
             malvado = collision.gameObject;
             enemigoAnimator = collision.gameObject.GetComponent<Animator>();
-            enemigoAnimator.SetBool("Muerto", true);
-            enemBox = collision.gameObject.GetComponent<BoxCollider2D>();
-            enemBox.enabled = false;
+            enemBox = collision.gameObject.GetComponent<BoxCollider2D>();         
             StartCoroutine(Moricion());
         }
 
+    }
+    private void Matar()
+    {
+        Rana.Instance.vivo = false;
+        enemigoAnimator.SetBool("Muerto", true);
+        enemBox.enabled = false;
     }
     IEnumerator Moricion()
     {

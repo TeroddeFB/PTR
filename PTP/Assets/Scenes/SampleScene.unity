@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6184cbfa367ee064db98fb6a29bcd8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tmpText: {fileID: 0}
+  tmpText: {fileID: 1158095021}
   hoverText: 
   originalText: 
   escena: 0
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1158095019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4432654f1e983644abf0036217157068, type: 3}
+  m_Script: {fileID: 11500000, guid: 0669caa547ccdb342a6d1f42ec4aa2f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1476848953

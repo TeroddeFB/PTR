@@ -33,45 +33,78 @@ public class Rana : MonoBehaviour
     {
         ubiJug = transform.position;
         horizontalInput = Input.GetAxisRaw("Horizontal") * 5f;
+
+        // Movimiento horizontal si el jugador está vivo
         if (vivo)
         {
             rb.velocity = new Vector2(horizontalInput, rb.velocity.y);
-
         }
 
+        // Verificar si el jugador ha caído por debajo del límite
         if (transform.position.y < -9)
         {
             vivo = false;
             Destroy(gameObject);
         }
 
+        // Evaluar acciones basadas en el input del jugador
+        int action = 0;
+
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            playerAnim.SetTrigger("Salta");
-            playerAnim.SetBool("Saltando", true);
-            rb.AddForce(Vector2.up * 6f, ForceMode2D.Impulse);
-            isGrounded = false;
-
+            action = 1; // Saltar
         }
         else if (horizontalInput != 0 && vivo)
         {
-            playerAnim.SetBool("Corre", true);
-            if (horizontalInput > 0)
-            {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            else if (horizontalInput < 0)
-            {
-                transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
+            action = 2; // Correr
         }
         else if (horizontalInput == 0)
         {
-            playerAnim.SetBool("Corre", false);
-
+            action = 3; // No está corriendo
         }
 
+        // Usar switch para manejar las acciones
+        switch (action)
+        {
+            case 1:
+                Saltar();
+                break;
+
+            case 2:
+                Correr();
+                break;
+
+            case 3:
+                playerAnim.SetBool("Corre", false);
+                break;
+
+            default:
+                // No hacer nada por defecto
+                break;
+        }
+
+
     }
+    private void Saltar()
+    {
+        playerAnim.SetTrigger("Salta");
+        playerAnim.SetBool("Saltando", true);
+        rb.AddForce(Vector2.up * 6f, ForceMode2D.Impulse);
+        isGrounded = false;
+    }
+    private void Correr()
+    {
+        playerAnim.SetBool("Corre", true);
+        if (horizontalInput > 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (horizontalInput < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Piso"))
@@ -86,14 +119,12 @@ public class Rana : MonoBehaviour
         // Verifica si el objeto que entra al trigger tiene la etiqueta "Player"
         if (collision.gameObject.CompareTag("Cabeza"))
         {
-
+            
             malvado = collision.transform.parent.gameObject;
-            enemigoAnimator = collision.transform.parent.gameObject.GetComponent<Animator>();
-            enemigoAnimator.SetBool("Muerto", true);
+            enemigoAnimator = collision.transform.parent.gameObject.GetComponent<Animator>();           
             enem = collision.transform.parent.gameObject.GetComponent<Enemigo>();
-            enem.puedeMatar = false;
             enemBox = collision.transform.parent.gameObject.GetComponent<BoxCollider2D>();
-            enemBox.enabled = false;
+            Matar();
             StartCoroutine(Moricion());
 
 
@@ -112,6 +143,12 @@ public class Rana : MonoBehaviour
 
         }
 
+    }
+    private void Matar()
+    {
+        enemigoAnimator.SetBool("Muerto", true);
+        enem.puedeMatar = false;
+        enemBox.enabled = false;
     }
     IEnumerator Moricion()
     {
