@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BotRei : Boton
+public class BotRei : Boton // INHERITANCE
 {
     // Start is called before the first frame update
 
-    protected override void Hacer()
+    protected override void Hacer() // POLYMORPHISM
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

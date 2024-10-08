@@ -10,12 +10,23 @@ public class Rana : MonoBehaviour
     public Animator playerAnim;
     public bool tocPared;
     public static Rana Instance;
-    public Vector3 ubiJug;
+    private Vector3 ubicacion;
+    public Vector3 ubiJug
+    {
+        get { return ubicacion; }
+
+        set
+        {
+            ubicacion = value; // ENCAPSULATION
+
+        }
+
+    }
     public GameObject onCollectEffect;
-    private Animator enemigoAnimator;
-    private Enemigo enem;
-    private BoxCollider2D enemBox;
-    private GameObject malvado;
+    private Animator enemigoAnimator; 
+    private Enemigo enem; 
+    private BoxCollider2D enemBox; 
+    private GameObject malvado; 
     public bool vivo = true;
 
 
@@ -31,7 +42,7 @@ public class Rana : MonoBehaviour
 
     void Update()
     {
-        ubiJug = transform.position;
+        ubicacion = transform.position;
         horizontalInput = Input.GetAxisRaw("Horizontal") * 5f;
 
         // Movimiento horizontal si el jugador está vivo
@@ -85,14 +96,14 @@ public class Rana : MonoBehaviour
 
 
     }
-    private void Saltar()
+    private void Saltar() // ABSTRACTION
     {
         playerAnim.SetTrigger("Salta");
         playerAnim.SetBool("Saltando", true);
         rb.AddForce(Vector2.up * 6f, ForceMode2D.Impulse);
         isGrounded = false;
     }
-    private void Correr()
+    private void Correr() // ABSTRACTION
     {
         playerAnim.SetBool("Corre", true);
         if (horizontalInput > 0)
