@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Rana : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public bool isGrounded = true;
     public float horizontalInput;
-    private Animator playerAnim;
+    public Animator playerAnim;
     public bool tocPared;
     public static Rana Instance;
     public Vector3 ubiJug;
@@ -39,6 +39,11 @@ public class Rana : MonoBehaviour
 
         }
 
+        if (transform.position.y < -9)
+        {
+            vivo = false;
+            Destroy(gameObject);
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
@@ -101,8 +106,9 @@ public class Rana : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Cereza"))
         {
-            Destroy(collision.gameObject);
             Instantiate(onCollectEffect, collision.gameObject.transform.position, transform.rotation);
+            Destroy(collision.gameObject);
+            
 
         }
 

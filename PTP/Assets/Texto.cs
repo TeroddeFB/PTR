@@ -13,22 +13,20 @@ public class Texto : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     void Start()
     {
         tmpText = GetComponent<TextMeshProUGUI>();
-        originalText = tmpText.text;
-        hoverText = "-" + originalText;
+        // originalText = tmpText.text;
+        // hoverText = "-" + originalText;
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
         
-        tmpText.text = hoverText;
+        // tmpText.text = hoverText;
+        tmpText.color = Color.yellow;
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        tmpText.text = originalText;
+        // tmpText.text = originalText;
+        tmpText.color = Color.white;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

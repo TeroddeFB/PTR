@@ -27,6 +27,7 @@ public class Manager : MonoBehaviour
         else if (Rana.Instance.ubiJug.x > 66f)
         {
             winTexto.enabled = true;
+            CentrarEnCanvas();
         }
     }
     public void CentrarEnCanvas()
@@ -37,6 +38,13 @@ public class Manager : MonoBehaviour
             uiElemento.offsetMax = new Vector2(-760f, -485f); // right y top
             uiElemento.anchoredPosition = Vector2.zero;
             reiTexto.alignment = TextAlignmentOptions.Center;
+            if (Rana.Instance != null)
+            {
+                Rana.Instance.vivo = false;
+                Rana.Instance.playerAnim.SetBool("Corre", false);
+                Rana.Instance.rb.velocity = new Vector2(0, 0);
+            }
+
         }
     }
 }
