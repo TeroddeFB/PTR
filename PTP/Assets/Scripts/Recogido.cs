@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,11 +14,11 @@ public class Recogido : MonoBehaviour
 
     void Update()
     {
-        // Verifica si la animación ha terminado.
+        // Verifica si la animaciï¿½n ha terminado.
         if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1 &&
             animator.GetCurrentAnimatorStateInfo(0).IsName("Recogido"))
         {
-            Destroy(gameObject);  
+            Destroy(gameObject);
         }
     }
 }

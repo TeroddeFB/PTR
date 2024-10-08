@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 
 public class Texto : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    private TextMeshProUGUI tmpText;  // El TMP que cambiará de texto
-    private string hoverText;  // Texto cuando el mouse está encima
-    private string originalText;  // Texto original
+    private TextMeshProUGUI tmpText;  // El TMP que cambiarï¿½ de texto
+    // private string hoverText;  // Texto cuando el mouse estï¿½ encima
+    // private string originalText;  // Texto original
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class Texto : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        
+
         // tmpText.text = hoverText;
         tmpText.color = Color.yellow;
     }

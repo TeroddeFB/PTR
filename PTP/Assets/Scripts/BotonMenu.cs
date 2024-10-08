@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BotRei : Boton
+public class BotonMenu : Boton
 {
+    public int escena;
     // Start is called before the first frame update
-
     protected override void Hacer()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(escena);
     }
-
-    // Update is called once per frame
-
 }

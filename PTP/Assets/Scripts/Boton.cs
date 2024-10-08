@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -10,8 +10,8 @@ public abstract class Boton : MonoBehaviour
 {
     protected Button button;
 
-    public TextMeshProUGUI tmpText;  // El TMP que cambiará de texto
-    public string hoverText;  // Texto cuando el mouse está encima
+    public TextMeshProUGUI tmpText;  // El TMP que cambiarï¿½ de texto
+    public string hoverText;  // Texto cuando el mouse estï¿½ encima
     public string originalText;  // Texto original
 
     // Start is called before the first frame update

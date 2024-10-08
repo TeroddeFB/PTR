@@ -219,10 +219,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 71202628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc1c997e73fd054c998af1c564b6ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: 0516c2c39bc4b274f81c15cfc3b0fb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximoEnemigo: 28.5
+  maximoEnemigo: 29
   minimoJugador: 27
   puedeMatar: 0
 --- !u!61 &71202630
@@ -1031,7 +1031,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &509682939
 MonoBehaviour:
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 509682936}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37ba2bbb7f8df1744befb6d027eea7d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 599691f9d1fd9fe44b96445615a19283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 1721454826}
@@ -1095,7 +1095,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 618338512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ef9bc9f1847785488c420d30a70ccb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8157eab787608b34f9dd084fd51fd37b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tmpText: {fileID: 1643159102}
@@ -1699,7 +1699,7 @@ Transform:
   m_Children:
   - {fileID: 1781391085}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!50 &733949266
 Rigidbody2D:
@@ -1757,7 +1757,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 733949262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc1c997e73fd054c998af1c564b6ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: 0516c2c39bc4b274f81c15cfc3b0fb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maximoEnemigo: -9
@@ -1847,7 +1847,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 892261258}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37ba2bbb7f8df1744befb6d027eea7d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 599691f9d1fd9fe44b96445615a19283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 1721454826}
@@ -1914,7 +1914,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &936694371
 GameObject:
@@ -2052,7 +2052,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 953616084}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37ba2bbb7f8df1744befb6d027eea7d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 599691f9d1fd9fe44b96445615a19283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 1721454826}
@@ -2374,7 +2374,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 985589138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4432654f1e983644abf0036217157068, type: 3}
+  m_Script: {fileID: 11500000, guid: 0669caa547ccdb342a6d1f42ec4aa2f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1083659498
@@ -2676,7 +2676,7 @@ Transform:
   - {fileID: 184594018}
   - {fileID: 377965331}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156283354
 GameObject:
@@ -4236,10 +4236,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1392648409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb2a6a620ef32244b6eceba73370d63, type: 3}
+  m_Script: {fileID: 11500000, guid: c3d86b894f16a18479cf8181ac4eaf74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tmpText: {fileID: 985589140}
+  tmpText: {fileID: 0}
   hoverText: 
   originalText: 
 --- !u!1 &1443689990
@@ -4388,7 +4388,7 @@ Transform:
   - {fileID: 1173492666}
   - {fileID: 1787285305}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1572384112
 GameObject:
@@ -4661,11 +4661,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1592078305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc1c997e73fd054c998af1c564b6ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: 0516c2c39bc4b274f81c15cfc3b0fb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximoEnemigo: 18
-  minimoJugador: 17
+  maximoEnemigo: 18.75
+  minimoJugador: 18
   puedeMatar: 0
 --- !u!1 &1643159100
 GameObject:
@@ -4811,7 +4811,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1643159100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4432654f1e983644abf0036217157068, type: 3}
+  m_Script: {fileID: 11500000, guid: 0669caa547ccdb342a6d1f42ec4aa2f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1721454826
@@ -4829,7 +4829,7 @@ GameObject:
   - component: {fileID: 1721454833}
   - component: {fileID: 1721454830}
   m_Layer: 0
-  m_Name: Idle (32x32)_0
+  m_Name: Rana
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4975,13 +4975,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1721454826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 156f97025166c444eb03cc876e9207dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 90b303d5059c82b4894238068aa2b1a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   isGrounded: 1
   horizontalInput: 0
-  playerAnim: {fileID: 0}
+  playerAnim: {fileID: 1721454827}
   tocPared: 0
   ubiJug: {x: 0, y: 0, z: 0}
   onCollectEffect: {fileID: 2457569790610742018, guid: 92baeba0e020b634aa5626a351060d5c, type: 3}
@@ -5132,7 +5132,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776541897}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 46.3, y: -0.59, z: 0}
+  m_LocalPosition: {x: 46.56, y: -0.59, z: 0}
   m_LocalScale: {x: 4.2, y: 4.2, z: 4.2}
   m_Children:
   - {fileID: 1156283355}
@@ -5148,10 +5148,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1776541897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc1c997e73fd054c998af1c564b6ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: 0516c2c39bc4b274f81c15cfc3b0fb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximoEnemigo: 27.5
+  maximoEnemigo: 27.75
   minimoJugador: 27
   puedeMatar: 0
 --- !u!1 &1781391084
@@ -5538,7 +5538,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1846738771}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0488f221893057145a9072bebca7f1be, type: 3}
+  m_Script: {fileID: 11500000, guid: eef496d83ad601145832e34e196c9fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 1721454826}
@@ -5755,7 +5755,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1883013396
 MonoBehaviour:
@@ -5766,7 +5766,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1883013393}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37ba2bbb7f8df1744befb6d027eea7d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 599691f9d1fd9fe44b96445615a19283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 1721454826}
@@ -6103,7 +6103,7 @@ Transform:
   - {fileID: 1097101917}
   - {fileID: 1572384113}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2005501397
 GameObject:
@@ -6145,7 +6145,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2005501397}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5774c1c56095e042979fb1cf3f34456, type: 3}
+  m_Script: {fileID: 11500000, guid: 69588016bcb5a91459268b6c1d28f144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 1231906218}

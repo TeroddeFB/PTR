@@ -74,7 +74,7 @@ public class Rana : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Piso")) 
+        if (collision.gameObject.CompareTag("Piso"))
         {
             isGrounded = true;
             playerAnim.SetBool("Saltando", false);
@@ -108,7 +108,7 @@ public class Rana : MonoBehaviour
         {
             Instantiate(onCollectEffect, collision.gameObject.transform.position, transform.rotation);
             Destroy(collision.gameObject);
-            
+
 
         }
 
