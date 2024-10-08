@@ -459,7 +459,7 @@ MonoBehaviour:
   tmpText: {fileID: 1158095021}
   hoverText: 
   originalText: 
-  escena: 0
+  escena: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

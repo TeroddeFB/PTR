@@ -7,6 +7,6 @@ public class BotVolver : Boton
 {
     protected override void Hacer()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }

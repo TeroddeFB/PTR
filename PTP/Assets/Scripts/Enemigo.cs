@@ -41,7 +41,8 @@ public class Enemigo : MonoBehaviour
         {            
             malvado = collision.gameObject;
             enemigoAnimator = collision.gameObject.GetComponent<Animator>();
-            enemBox = collision.gameObject.GetComponent<BoxCollider2D>();         
+            enemBox = collision.gameObject.GetComponent<BoxCollider2D>();
+            Matar();
             StartCoroutine(Moricion());
         }
 
